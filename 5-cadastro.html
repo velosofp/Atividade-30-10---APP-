@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça um cadastro demonstrativo no Hospital Aurora.">
+    <title>Cadastro | Hospital Aurora</title>
+    <link rel="stylesheet" href="5-cadastro.css">
+    <script src="5-cadastro.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="menu-navegacao" aria-label="Navegação principal">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="especialidades.html">Especialidades</a>
+            <a href="4-profissionais.html">Profissionais</a>
+            <a href="5-cadastro.html" aria-current="page">Cadastro</a>
+            <a href="simulacao.html">Simulação</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="apresentacao" aria-labelledby="titulo-principal">
+            <img class="logo" src="assets/logo.png" alt="Hospital Aurora — Cuidar de pessoas sempre">
+            <p class="etiqueta">Estamos aqui para cuidar</p>
+            <h1 id="titulo-principal">Cadastro demonstrativo</h1>
+            <p class="texto-apresentacao">
+                Preencha seus dados fictícios para conhecer o formulário de cadastro do Hospital Aurora.
+            </p>
+        </section>
+
+        <section class="secao-cadastro" aria-labelledby="titulo-formulario">
+            <div class="cabecalho-secao">
+                <h2 id="titulo-formulario">Seus dados</h2>
+                <p>Todos os campos são obrigatórios.</p>
+            </div>
+
+            <form id="formulario-cadastro">
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input
+                        id="nome"
+                        name="nome"
+                        type="text"
+                        autocomplete="name"
+                        minlength="3"
+                        maxlength="80"
+                        placeholder="Ex.: Ana Silva"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        maxlength="120"
+                        placeholder="Ex.: ana@email.com"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input
+                        id="telefone"
+                        name="telefone"
+                        type="tel"
+                        autocomplete="tel"
+                        inputmode="tel"
+                        pattern="[0-9()+ -]{10,16}"
+                        maxlength="16"
+                        placeholder="Ex.: (11) 99999-9999"
+                        aria-describedby="ajuda-telefone"
+                        required
+                    >
+                    <small id="ajuda-telefone">Informe entre 10 e 16 caracteres, usando números, espaços, parênteses, + ou hífen.</small>
+                </div>
+
+                <button class="botao" type="submit">Concluir cadastro</button>
+                <p class="aviso">Demonstração: os dados não serão enviados nem armazenados.</p>
+            </form>
+
+            <p id="mensagem-confirmacao" class="mensagem-confirmacao" role="status" aria-live="polite" hidden></p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Hospital Aurora <span aria-hidden="true">•</span> Cuidar de pessoas sempre.</p>
+    </footer>
+</body>
+</html>
