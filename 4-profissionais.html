@@ -1,32 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital aurora</title>
+    <meta name="description" content="Conheça os profissionais fictícios da equipe do Hospital Aurora.">
+    <title>Profissionais | Hospital Aurora</title>
     <link rel="stylesheet" href="4-profissionais.css">
 </head>
-<body class="página-profissionais">
-    
-    <nav>
-        <a href="index.html">Home</a>
-    </nav>
+<body>
+    <header class="cabecalho">
+        <nav class="menu-navegacao" aria-label="Navegação principal">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="especialidades.html">Especialidades</a>
+            <a href="4-profissionais.html" aria-current="page">Profissionais</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="simulacao.html">Simulação</a>
+        </nav>
+    </header>
 
     <main>
-        <h1>Seja bem vindo! Aqui você vai poder ver nosso profissionais.</h1>
-        <!-- <img src="assets/fundo-profissionais-png.webp" alt="Fundo da página"> -->
-    
-    <img class="Foto_doutor_brito" src="assets/Doutor_Brito.jpeg" alt="">
-    <p>Doutor Brito, um dos melhores medicos do país (tavlez até do mundo), um homem que
-        se preocupa com o povo, um homem realemente do povo
-    </p>
+        <section class="apresentacao" aria-labelledby="titulo-principal">
+            <img class="logo" src="assets/logo.png" alt="Hospital Aurora — Cuidar de pessoas sempre">
+            <p class="etiqueta">Cuidado que acolhe</p>
+            <h1 id="titulo-principal">Conheça nossos profissionais</h1>
+            <p class="texto-apresentacao">
+                Uma equipe preparada para ouvir, orientar e cuidar de você em cada etapa.
+            </p>
+        </section>
 
-    <form id="descricao-doutor_brito">
-        <button> type="button" onclick="descricao_doutor_brito()">Descrição</button>
-    </form>
+        <section class="equipe" aria-labelledby="titulo-equipe">
+            <div class="cabecalho-secao">
+                <p class="etiqueta">Hospital Aurora</p>
+                <h2 id="titulo-equipe">Nossa equipe médica</h2>
+                <p>Profissionais dedicados a oferecer um atendimento humano e atencioso.</p>
+            </div>
+
+            <div class="grade-profissionais">
+                <article class="cartao-profissional">
+                    <img src="assets/Doutor_Brito.jpeg" alt="Dr. Brito, médico do Hospital Aurora">
+                    <div class="conteudo-cartao">
+                        <p class="especialidade">Cardiologia</p>
+                        <h3>Dr. Brito</h3>
+                        <p>Atencioso e dedicado, acompanha a saúde do coração com escuta cuidadosa as vezes ele distrai nas consultas (ele é uma resenha).</p>
+                    </div>
+                </article>
+
+                <article class="cartao-profissional">
+                    <img src="assets/Doutora.jpg" alt="Dra. Helena Martins, médica do Hospital Aurora">
+                    <div class="conteudo-cartao">
+                        <p class="especialidade">Pediatria</p>
+                        <h3>Dra. Helena Martins</h3>
+                        <p>Cuida da saúde de crianças e adolescentes com carinho, atenção às famílias e incentivo ao desenvolvimento saudável.</p>
+                    </div>
+                </article>
+
+                <article class="cartao-profissional">
+                    <img src="assets/Doutor.jpg" alt="Dr. Rafael Costa, médico do Hospital Aurora">
+                    <div class="conteudo-cartao">
+                        <p class="especialidade">Clínica geral</p>
+                        <h3>Dr. Rafael Costa</h3>
+                        <p>Oferece uma avaliação ampla e próxima, ajudando cada paciente a encontrar o melhor caminho para cuidar da saúde.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
-
-    <script src="4-profissionais.js"></script>
+    <footer class="rodape">
+        <p>Hospital Aurora <span aria-hidden="true">•</span> Cuidar de pessoas sempre.</p>
+    </footer>
 </body>
 </html>
+    
