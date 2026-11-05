@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simule um agendamento no Hospital Aurora, sem criar uma consulta real.">
+    <title>Agendamento | Hospital Aurora</title>
+    <link rel="stylesheet" href="6-agendamento.css">
+    <script src="6-agendamento.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="menu-navegacao" aria-label="Navegação principal">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="especialidades.html">Especialidades</a>
+            <a href="4-profissionais.html">Profissionais</a>
+            <a href="5-cadastro.html">Cadastro</a>
+            <a href="6-agendamento.html" aria-current="page">Agendamento</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="apresentacao" aria-labelledby="titulo-principal">
+            <img class="logo" src="assets/logo.png" alt="Hospital Aurora — Cuidar de pessoas sempre">
+            <p class="etiqueta">Cuidado no seu tempo</p>
+            <h1 id="titulo-principal">Simule seu agendamento</h1>
+            <p class="texto-apresentacao">
+                Escolha uma especialidade, uma data e um horário para visualizar o resumo da simulação.
+            </p>
+        </section>
+
+        <section class="secao-agendamento" aria-labelledby="titulo-formulario">
+            <div class="cabecalho-secao">
+                <h2 id="titulo-formulario">Escolha um horário</h2>
+                <p>Preencha os campos para conferir os detalhes.</p>
+            </div>
+
+            <form id="formulario-agendamento">
+                <div class="campo">
+                    <label for="especialidade">Especialidade</label>
+                    <select id="especialidade" name="especialidade" required>
+                        <option value="" selected disabled>Selecione uma especialidade</option>
+                        <option value="Cardiologia">Cardiologia</option>
+                        <option value="Pediatria">Pediatria</option>
+                        <option value="Ortopedia">Ortopedia</option>
+                        <option value="Ginecologia">Ginecologia</option>
+                        <option value="Neurologia">Neurologia</option>
+                        <option value="Dermatologia">Dermatologia</option>
+                        <option value="Oftalmologia">Oftalmologia</option>
+                        <option value="Clínica geral">Clínica geral</option>
+                        <option value="Endocrinologia">Endocrinologia</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="data">Data</label>
+                    <input id="data" name="data" type="date" required>
+                </div>
+
+                <div class="campo">
+                    <label for="horario">Horário</label>
+                    <select id="horario" name="horario" required>
+                        <option value="" selected disabled>Selecione um horário</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="16:00">16:00</option>
+                    </select>
+                </div>
+
+                <button class="botao" type="submit">Ver resumo</button>
+                <p class="aviso">Esta é apenas uma simulação. Nenhuma consulta será marcada.</p>
+            </form>
+
+            <section id="resumo-agendamento" class="resumo-agendamento" aria-labelledby="titulo-resumo" aria-live="polite" hidden>
+                <h2 id="titulo-resumo">Resumo da simulação</h2>
+                <p><strong>Especialidade:</strong> <span id="resumo-especialidade"></span></p>
+                <p><strong>Data:</strong> <span id="resumo-data"></span></p>
+                <p><strong>Horário:</strong> <span id="resumo-horario"></span></p>
+                <p class="aviso-resumo">Este resumo não representa um agendamento real.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Hospital Aurora <span aria-hidden="true">•</span> Cuidar de pessoas sempre.</p>
+    </footer>
+</body>
+</html>
